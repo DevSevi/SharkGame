@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverObjekt;
     
     [Header("Timer Einstellungen")]
-    // 3 Minuten entsprechen 180 Sekunden (3 * 60)
-    public float verbleibendeZeit = 180f;
+    // 2 Minuten entsprechen 120 Sekunden (2 * 60)
+    public float verbleibendeZeit = 120f;
     
     private int punkteStand = 0;
     private bool spielVorbei = false;
