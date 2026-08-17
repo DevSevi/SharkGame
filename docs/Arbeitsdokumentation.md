@@ -56,11 +56,13 @@ Anschliessend war das Spiel mal so ungefähr spielbar, hat jedoch auch noch nich
 1. Nahtlose Unterwasser-Grafik importiert und Mesh Type auf _Full Rect_ gesetzt.
 2. Zwei Hintergrundobjekte nebeneinander platziert (`Underwater1` & `Underwater2`).
 3. `HintergrundWiederholung.cs` geschrieben, das das jeweils hintere Bild automatisch vor die Kamera teleportiert.
-4. Hintergrundmusik auf der `Main Camera` als geloopte `AudioSource` eingerichtet.
+4. Musik durfte nicht fehlen. Passend zum Thema habe ich den Song "Sharks" von Imagine Dragons als Hintergrundmusik auf der `Main Camera` als `AudioSource` eingerichtet.
 
 Der Hintergrund machte das Game viel ansprechender:
 
 ![Background](AddedBackground.png)
+
+Zudem machte der Sound das Ganze viel lebendiger.
 
 ### Phase 5: Rundenzeit & Menü-Rückkehr
 
@@ -93,7 +95,7 @@ Das machte schon viel mehr Laune:
 
 - **Audio-Import (.m4a):**
   - _Problem:_ Unity erkannte `.m4a` im Editor nur als Binärdatei ohne Audio-Optionen.
-  - _Lösung:_ Datei in standardisiertes / `.mp3` konvertiert.
+  - _Lösung:_ Datei in standardisiertes / `.wav` konvertiert.
 
 - **APK-Parsing-Fehler bei Installation:**
   - _Problem:_ Android verweigerte die Installation ("Beim Parsen des Pakets ist ein Problem aufgetreten").
