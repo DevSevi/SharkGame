@@ -6,6 +6,7 @@ Dozentin - Carina Schoppe
 Student - Séverin Kiener
 
 Arbeitsdokumentation siehe [hier](docs/Arbeitsdokumentation.md)
+Die Präsentation ist [hier](docs/SharkGame.pdf) zu finden.
 
 ### Inbetriebnahme
 
