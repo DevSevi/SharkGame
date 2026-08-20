@@ -103,6 +103,10 @@ Um das Spiel noch ein bisschen unvorgesehener zu machen, habe ich einen EnemySha
 2. Player Settings konfiguriert (Package Name, Minimum API Level, Architekturen: ARMv7 + ARM64).
 3. APK gebaut, auf das Android-Gerät übertragen und getestet.
 
+### Phase 10: Finaler Commit auf Github & Release erstellen
+
+Mit dem Tag "Abgabe" committen und einen Release auf Github erstellen.
+
 ---
 
 ## 4. Problemlösungen & Learnings
