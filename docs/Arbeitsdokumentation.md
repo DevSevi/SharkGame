@@ -91,7 +91,11 @@ Damit es ein bisschen interessanter wird, zeige ich den Highscore neu auf dem Me
 int alterHighscore = PlayerPrefs.GetInt("Highscore", 0);
 ```
 
-### Phase 8
+### Phase 8: EnemyShark
+
+Um das Spiel noch ein bisschen unvorgesehener zu machen, habe ich einen EnemyShark hinzugefügt, welcher nach einiger Zeit in die entgegengesetzte Richtung schwimmt:
+
+![EnemyShark](EnemyShark.png)
 
 ### Phase 9: Android-Build & Bereitstellung
 
