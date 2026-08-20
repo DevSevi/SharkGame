@@ -14,9 +14,13 @@ public class GameManager : MonoBehaviour
     // 2 Minuten entsprechen 120 Sekunden (2 * 60)
     public float verbleibendeZeit = 120f;
     
+    [Header("Audio")]
+    public AudioSource musikAudioSource;
+    
     private int punkteStand = 0;
     private bool spielVorbei = false;
 
+   
     void Start()
     {
         // Sicherstellen, dass das Spiel mit 0 Punkten startet
@@ -89,6 +93,19 @@ public class GameManager : MonoBehaviour
         if (timerTextAnzeigefeld != null)
         {
             timerTextAnzeigefeld.gameObject.SetActive(false);
+        }
+        
+        // Highscore prüfen und speichern
+        int alterHighscore = PlayerPrefs.GetInt("Highscore", 0);
+        if (punkteStand > alterHighscore)
+        {
+            PlayerPrefs.SetInt("Highscore", punkteStand);
+            PlayerPrefs.Save(); // Speichert den Wert permanent ab
+        }
+        
+        if (musikAudioSource != null)
+        {
+            musikAudioSource.Stop();
         }
         
         Debug.Log("Game Over!");

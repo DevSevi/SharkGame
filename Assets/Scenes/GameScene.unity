@@ -152,6 +152,7 @@ MonoBehaviour:
   timerTextAnzeigefeld: {fileID: 1987514317}
   gameOverObjekt: {fileID: 1814641304}
   verbleibendeZeit: 120
+  musikAudioSource: {fileID: 519420034}
 --- !u!4 &92591879
 Transform:
   m_ObjectHideFlags: 0
@@ -692,6 +693,7 @@ Transform:
   m_Children:
   - {fileID: 209069342}
   - {fileID: 1553225390}
+  - {fileID: 1470296043}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
@@ -1209,6 +1211,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1470296042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1470296043}
+  - component: {fileID: 1470296044}
+  m_Layer: 0
+  m_Name: EnemySharkSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1470296043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470296042}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 519420032}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1470296044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470296042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113b3481f26d411bafa08759e3290b54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySharkSpawner
+  sharkPrefab: {fileID: 6677920209275507774, guid: 3cab67a69442245c4b52d33a886cb3be, type: 3}
+  startVerzoegerung: 40
+  spawnIntervall: 7
+  spawnAbstandRechts: 14
+  minY: -3.5
+  maxY: 3.5
 --- !u!1 &1553225389
 GameObject:
   m_ObjectHideFlags: 0

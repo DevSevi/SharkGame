@@ -83,7 +83,17 @@ Das machte schon viel mehr Laune:
 
 ![NiceSharkAndFish](NiceSharkAndFish.png)
 
-### Phase 7: Android-Build & Bereitstellung
+### Phase 7: Highscore auf Menu
+
+Damit es ein bisschen interessanter wird, zeige ich den Highscore neu auf dem Menu an. Das mache ich über "PlayerPrefs", damit die Punktzahl bestehen bleibt.
+
+```csharp
+int alterHighscore = PlayerPrefs.GetInt("Highscore", 0);
+```
+
+### Phase 8
+
+### Phase 9: Android-Build & Bereitstellung
 
 1. Build Settings: Szenenreihenfolge festgelegt (`0: StartMenu`, `1: Game`).
 2. Player Settings konfiguriert (Package Name, Minimum API Level, Architekturen: ARMv7 + ARM64).

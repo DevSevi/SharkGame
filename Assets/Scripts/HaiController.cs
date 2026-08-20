@@ -81,5 +81,36 @@ public class HaiController : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
             rb.simulated = false; // Schaltet die Physik für den Hai ab
         }
+
+        if (other.gameObject.tag == "EnemyShark")
+        {
+            if (fressenSound != null)
+            {
+                Vector3 soundPosition = new Vector3(transform.position.x, transform.position.y, -10f);
+                AudioSource.PlayClipAtPoint(fressenSound, soundPosition, 2.0f);
+            }
+
+            // PARTIKEL-SYSTEM AUSLÖSEN:
+            if (partikelPrefab != null)
+            {
+                // Erzeugt das Partikel-System exakt an der Position des Fisches
+                // Quaternion.identity bedeutet: keine Drehung
+                Instantiate(partikelPrefab, transform.position, Quaternion.identity);
+            }
+            // Player unsichtbar machen
+            transform.root.gameObject.SetActive(false);
+            
+            // Finde den GameManager in der Szene und löse das Game Over aus
+            GameManager gm = FindAnyObjectByType<GameManager>();
+            if (gm != null)
+            {
+                gm.GameOver();
+            }
+
+            // Optional: Schalte die Bewegung des Hais ab, damit er regungslos abstürzt
+            vorwaertsGeschwindigkeit = 0;
+            rb.linearVelocity = Vector2.zero;
+            rb.simulated = true;
+        }
     }
 }
